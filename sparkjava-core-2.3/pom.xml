@@ -30,15 +30,15 @@
 
     <groupId>org.apache.servicemix.bundles</groupId>
     <artifactId>org.apache.servicemix.bundles.sparkjava-core</artifactId>
-    <version>2.3_1</version>
+    <version>2.3_1.tesb1</version>
     <packaging>bundle</packaging>
     <name>Apache ServiceMix :: Bundles :: ${pkgArtifactId}</name>
 
     <scm>
-        <connection>scm:git:https://git-wip-us.apache.org/repos/asf/servicemix-bundles.git</connection>
-        <developerConnection>scm:git:https://git-wip-us.apache.org/repos/asf/servicemix-bundles.git</developerConnection>
-        <url>https://git-wip-us.apache.org/repos/asf?p=servicemix-bundles.git</url>
-    <tag>org.apache.servicemix.bundles.sparkjava-core-2.3_1</tag>
+        <connection>scm:git:https://github.com/Talend/servicemix-bundles.git</connection>
+        <developerConnection>scm:git:https://github.com/Talend/servicemix-bundles.git</developerConnection>
+        <url>https://github.com/Talend/servicemix-bundles.git</url>
+    <tag>org.apache.servicemix.bundles.sparkjava-core-2.3_1.tesb1</tag>
   </scm>
 
     <properties>
@@ -83,9 +83,9 @@
                             <filters>
                                 <filter>
                                     <artifact>${pkgGroupId}:${pkgArtifactId}</artifact>
-				    <excludes>
-					<exclude>**/*</exclude>
-				    </excludes>
+                                    <excludes>
+                                        <exclude>**/*</exclude>
+                                    </excludes>
                                 </filter>
                             </filters>
                             <promoteTransitiveDependencies>true</promoteTransitiveDependencies>
@@ -105,14 +105,15 @@
                         <Bundle-Name>sparkjava</Bundle-Name>
                         <Bundle-SymbolicName>${project.artifactId}</Bundle-SymbolicName>
                         <Export-Package>
-			   spark.*;version="${pkgVersion}";-split-package:=merge-first
+                           spark.*;version="${pkgVersion}";-split-package:=merge-first
                         </Export-Package>
                         <Import-Package>
-			   javax.servlet*;version="[2,4)",
+                           javax.servlet*;version="[2,4)",
                            org.eclipse.jetty*;version="[8,10)",
                            *
-			</Import-Package>
+                        </Import-Package>
                         <Bundle-NativeCode>*</Bundle-NativeCode>
+                        <_removeheaders>Ignore-Package,Include-Resource,Private-Package,Embed-Dependency,Bundle-NativeCode</_removeheaders>
                     </instructions>
                 </configuration>
             </plugin>
