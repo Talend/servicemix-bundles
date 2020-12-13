@@ -41,6 +41,13 @@
     <packaging>pom</packaging>
     <name>Apache ServiceMix :: Bundles</name>
 
+    <scm>
+        <connection>scm:git:https://github.com/Talend/servicemix-bundles.git</connection>
+        <developerConnection>scm:git:https://github.com/Talend/servicemix-bundles.git</developerConnection>
+        <url>https://github.com/Talend/servicemix-bundles.git</url>
+        <tag>HEAD</tag>
+    </scm>
+
     <modules>
         <module>spring-batch-core-4.0.2.RELEASE</module>
         <module>spring-batch-core-3.0.10.RELEASE</module>
