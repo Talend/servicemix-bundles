@@ -24,13 +24,13 @@
     <parent>
         <groupId>org.apache.servicemix.bundles</groupId>
         <artifactId>bundles-pom</artifactId>
-        <version>13</version>
+        <version>14</version>
         <relativePath>../bundles-pom/pom.xml</relativePath>
     </parent>
 
     <groupId>org.apache.servicemix.bundles</groupId>
     <artifactId>org.apache.servicemix.bundles.spring-ws-support</artifactId>
-    <version>2.4.2.RELEASE_2-SNAPSHOT</version>
+    <version>2.4.2.RELEASE_3-SNAPSHOT</version>
     <packaging>bundle</packaging>
     <name>Apache ServiceMix :: Bundles :: ${pkgArtifactId}</name>
 
@@ -48,6 +48,9 @@
         <servicemix.osgi.export.pkg>
             org.springframework.ws.transport
         </servicemix.osgi.export.pkg>
+        <servicemix.osgi.fragment.host>
+            ${project.groupId}.spring-ws-core
+        </servicemix.osgi.fragment.host>
         <servicemix.osgi.import.pkg>
             com.sun.mail.imap;resolution:=optional, 
             com.sun.net.httpserver;resolution:=optional, 
