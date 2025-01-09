@@ -30,7 +30,7 @@
 
     <groupId>org.apache.servicemix.bundles</groupId>
     <artifactId>org.apache.servicemix.bundles.spring-security-ldap</artifactId>
-    <version>5.7.12_2-SNAPSHOT</version>
+    <version>5.7.12_4-SNAPSHOT</version>
     <packaging>bundle</packaging>
     <name>Apache ServiceMix :: Bundles :: ${pkgArtifactId}</name>
 
@@ -53,6 +53,7 @@
             com.unboundid*;resolution:=optional,
             org.apache.directory*;resolution:=optional,
             netscape.ldap*;resolution:=optional, 
+            org.apache.mina.transport.socket;resolution:=optional,
             *
         </servicemix.osgi.import.pkg>
     </properties>
