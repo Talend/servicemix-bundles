@@ -30,17 +30,17 @@
 
     <groupId>org.apache.servicemix.bundles</groupId>
     <artifactId>org.apache.servicemix.bundles.opensaml</artifactId>
-    <version>4.3.2_2-SNAPSHOT</version>
+    <version>4.3.2_1.tesb1</version>
     <packaging>bundle</packaging>
     <name>Apache ServiceMix :: Bundles :: ${pkgArtifactId}</name>
     <description>This OSGi bundle wraps ${pkgArtifactId} ${pkgVersion} jar file.</description>
 
     <scm>
-        <connection>scm:git:https://gitbox.apache.org/repos/asf/servicemix-bundles.git</connection>
-        <developerConnection>scm:git:https://gitbox.apache.org/repos/asf/servicemix-bundles.git</developerConnection>
-        <url>https://gitbox.apache.org/repos/asf?p=servicemix-bundles.git</url>
-    <tag>HEAD</tag>
-  </scm>
+        <connection>scm:git:https://github.com/Talend/servicemix-bundles.git</connection>
+        <developerConnection>scm:git:https://github.com/Talend/servicemix-bundles.git</developerConnection>
+        <url>https://github.com/Talend/servicemix-bundles.git</url>
+        <tag>org.apache.servicemix.bundles.fastjson-1.2.37_1.tesb1</tag>
+    </scm>
 
     <properties>
         <pkgGroupId>org.opensaml</pkgGroupId>
@@ -60,8 +60,10 @@
             org.cryptacular*;resolution:=optional,
             org.apache.http*;resolution:=optional,
             com.beust.jcommander*;resolution:=optional,
-            javax.annotation;version="[3,4);resolution:=optional",
+            javax.annotation;version="[3,4)";resolution:=optional,
             com.google.common*;version="0.0.0",
+            org.apache.wss4j.common.saml;version="[3,4)",
+            org.apache.xml.security*;version="[3,4)",
             *
         </servicemix.osgi.import.pkg>
         <servicemix.osgi.private.pkg>
