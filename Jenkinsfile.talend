@@ -1,0 +1,5 @@
+@Library('esb') _
+
+Fork(
+        MVN_MODULES: ':org.apache.servicemix.bundles.opensaml'
+)
