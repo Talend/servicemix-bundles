@@ -41,6 +41,7 @@
     <name>Apache ServiceMix :: Bundles</name>
 
     <modules>
+      <module>kafka-clients-3.8.1</module>
       <module>spring-aop-6.1.16</module>
       <module>spring-aspects-6.1.16</module>
       <module>spring-beans-6.1.16</module>
