@@ -30,7 +30,7 @@
 
     <groupId>org.apache.servicemix.bundles</groupId>
     <artifactId>org.apache.servicemix.bundles.opensaml</artifactId>
-    <version>5.1.4_1</version>
+    <version>5.1.4_1.tesb2</version>
     <packaging>bundle</packaging>
     <name>Apache ServiceMix :: Bundles :: ${pkgArtifactId}</name>
     <description>This OSGi bundle wraps ${pkgArtifactId} ${pkgVersion} jar file.</description>
@@ -46,7 +46,7 @@
         <pkgGroupId>org.opensaml</pkgGroupId>
         <pkgArtifactId>opensaml</pkgArtifactId>
         <pkgVersion>5.1.4</pkgVersion>
-        <servicemix.osgi.source.version>5.1.4.1</servicemix.osgi.source.version>
+        <servicemix.osgi.source.version>5.1.4.1.tesb2</servicemix.osgi.source.version>
         <servicemix.osgi.export>
              org.opensaml*;version="${pkgVersion}";-split-package:=merge-first,
              net.shibboleth.utilities*;version="${pkgVersion}";-split-package:=merge-first
@@ -61,6 +61,8 @@
             org.apache.http*;resolution:=optional,
             com.beust.jcommander*;resolution:=optional,
             javax.annotation;version="[3,5)";resolution:=optional,
+            org.apache.xml.security*;version="[4,5)",
+            org.apache.wss4j.common.saml;version="[4,5)",
             com.google.common*,
             *
         </servicemix.osgi.import.pkg>
