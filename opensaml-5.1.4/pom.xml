@@ -36,11 +36,11 @@
     <description>This OSGi bundle wraps ${pkgArtifactId} ${pkgVersion} jar file.</description>
 
     <scm>
-        <connection>scm:git:https://gitbox.apache.org/repos/asf/servicemix-bundles.git</connection>
-        <developerConnection>scm:git:https://gitbox.apache.org/repos/asf/servicemix-bundles.git</developerConnection>
-        <url>https://gitbox.apache.org/repos/asf?p=servicemix-bundles.git</url>
-    <tag>org.apache.servicemix.bundles.opensaml-5.1.4_1</tag>
-  </scm>
+        <connection>scm:git:https://github.com/Talend/servicemix-bundles.git</connection>
+        <developerConnection>scm:git:https://github.com/Talend/servicemix-bundles.git</developerConnection>
+        <url>https://github.com/Talend/servicemix-bundles.git</url>
+        <tag>org.apache.servicemix.bundles.opensaml-5.1.4_1</tag>
+    </scm>
 
     <properties>
         <pkgGroupId>org.opensaml</pkgGroupId>
