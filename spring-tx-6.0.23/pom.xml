@@ -30,7 +30,7 @@
 
     <groupId>org.apache.servicemix.bundles</groupId>
     <artifactId>org.apache.servicemix.bundles.spring-tx</artifactId>
-    <version>6.0.23_2-SNAPSHOT</version>
+    <version>6.0.23_4-SNAPSHOT</version>
     <packaging>bundle</packaging>
     <name>Apache ServiceMix :: Bundles :: ${pkgArtifactId}</name>
 
@@ -60,8 +60,8 @@
             javax.resource.spi;resolution:=optional,
             javax.resource.spi.endpoint;resolution:=optional,
             javax.resource.spi.work;resolution:=optional,
-            jakarta.transaction;version="[1.2,2)";resolution:=optional,
-            jakarta.transaction.xa;version="[1.2,2)";resolution:=optional,
+            jakarta.transaction;version="[1.2,3)";resolution:=optional,
+            jakarta.transaction.xa;version="[1.2,3)";resolution:=optional,
             org.aopalliance.aop;version="[1,2)";resolution:=optional,
             org.aopalliance.intercept;version="[1,2)";resolution:=optional,
             org.apache.commons.logging;version="[1.1.1,2)";resolution:=optional,
