@@ -41,6 +41,7 @@
     <name>Apache ServiceMix :: Bundles</name>
 
     <modules>
+      <module>jaxb-xjc-4.0.5</module>
       <module>spring-aop-6.1.16</module>
       <module>spring-aspects-6.1.16</module>
       <module>spring-beans-6.1.16</module>
