@@ -41,6 +41,12 @@
  </scm>
   <build>
     <plugins>
+        <plugin>
+            <groupId>org.apache.felix</groupId>
+            <artifactId>maven-bundle-plugin</artifactId>
+            <version>5.1.9</version>
+            <extensions>true</extensions>
+        </plugin>
       <plugin>
         <artifactId>maven-shade-plugin</artifactId>
         <executions>
@@ -86,49 +92,47 @@
       <classifier>sources</classifier>
     </dependency>
   </dependencies>
-  <properties>
-    <servicemix.osgi.import.pkg>
-	!com.sun.codemodel*,
-        !com.sun.istack,
-	!com.sun.istack.tools*,
-	!com.sun.relaxng.javadt,
-	!com.sun.tools.xjc*,
-	!com.sun.xml.bind.serializer,
-	!com.sun.xml.bind.validator,
-	!com.sun.xml.bind.xmlschema,
-	!com.sun.xml.util,
-	!org.apache.xml.resolver*,
-	com.sun.org*;resolution:=optional,
-        javax.xml.stream*;resolution:=optional,
-	org.apache.tools.ant*;resolution:=optional,
-        com.sun.xml.txw2*;resolution:=optional,
-        com.sun.tools.rngom*;resolution:=optional,
-        com.sun.tools.rngdatatype*;resolution:=optional,
-        com.sun.xml.dtdparser*;resolution:=optional,
-        javax.activation;version="[1,2)",
-        javax.xml.bind*;version="[2,3)",
-        *
-    </servicemix.osgi.import.pkg>
-    <servicemix.osgi.export.pkg>
-    	com.sun.tools.xjc*;-split-package:=merge-first;-noimport:=true,
-        com.sun.codemodel*;-split-package:=merge-first;-noimport:=true,
-        com.sun.istack.tools*;-split-package:=merge-first;-noimport:=true
-    </servicemix.osgi.export.pkg>
-    <servicemix.osgi.private.pkg>
-        com.sun.org.*;-split-package:=merge-first,
-        com.sun.tools.rngom*;-split-package:=merge-first,
-        com.sun.xml.xsom*;-split-package:=merge-first,
-        com.sun.istack*;-split-package:=merge-first,
-        com.sun.tools.rngdatatype*;-split-package:=merge-first,
-        META-INF;-split-package:=merge-first,
-        META-INF.maven.org.apache.servicemix.bundles*;-split-package:=merge-first,
-        META-INF.services;-split-package:=merge-first,
-    </servicemix.osgi.private.pkg>
-    <servicemix.osgi.failok>true</servicemix.osgi.failok>
-    <pkgVersion>4.0.5</pkgVersion>
-    <pkgArtifactId>jaxb-xjc</pkgArtifactId>
-    <pkgGroupId>org.glassfish.jaxb</pkgGroupId>
-  </properties>
+    <properties>
+        <servicemix.osgi.import.pkg>
+            !com.sun.codemodel*,
+            !com.sun.istack*,
+            !com.sun.tools.xjc*,
+            !com.sun.tools.rngom*,
+            !com.sun.xml.xsom*,
+            !com.sun.xml.dtdparser*,
+            !com.sun.xml.txw2*,
+            com.sun.org*;resolution:=optional,
+            javax.xml.stream*;resolution:=optional,
+            javax.xml.catalog;resolution:=optional,
+            javax.annotation.processing;resolution:=optional,
+            javax.lang.model*;resolution:=optional,
+            org.apache.tools.ant*;resolution:=optional,
+            jakarta.activation;resolution:=optional,
+            jakarta.xml.bind*;resolution:=optional,
+            org.glassfish.jaxb.core*;resolution:=optional,
+            *
+        </servicemix.osgi.import.pkg>
+        <servicemix.osgi.export.pkg>
+            com.sun.tools.xjc*;-split-package:=merge-first;-noimport:=true,
+            com.sun.codemodel*;-split-package:=merge-first;-noimport:=true,
+            com.sun.istack.tools*;-split-package:=merge-first;-noimport:=true
+        </servicemix.osgi.export.pkg>
+        <servicemix.osgi.private.pkg>
+            com.sun.org.*;-split-package:=merge-first,
+            com.sun.tools.rngom*;-split-package:=merge-first,
+            com.sun.xml.xsom*;-split-package:=merge-first,
+            com.sun.istack;-split-package:=merge-first,
+            com.sun.xml.dtdparser*;-split-package:=merge-first,
+            com.sun.xml.txw2*;-split-package:=merge-first,
+            META-INF;-split-package:=merge-first,
+            META-INF.maven.org.apache.servicemix.bundles*;-split-package:=merge-first,
+            META-INF.services;-split-package:=merge-first,
+        </servicemix.osgi.private.pkg>
+        <servicemix.osgi.failok>true</servicemix.osgi.failok>
+        <pkgVersion>4.0.5</pkgVersion>
+        <pkgArtifactId>jaxb-xjc</pkgArtifactId>
+        <pkgGroupId>org.glassfish.jaxb</pkgGroupId>
+    </properties>
 </project>
 
 
