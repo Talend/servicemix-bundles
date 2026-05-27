@@ -1,0 +1,5 @@
+@Library('esb') _
+
+Fork(
+        MVN_MODULES: 'jaxb-xjc-4.0.5'
+)
