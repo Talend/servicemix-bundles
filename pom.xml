@@ -41,7 +41,7 @@
     <name>Apache ServiceMix :: Bundles</name>
 
     <modules>
-      <module>opensaml-4.3.2</module>
+      <module>opensaml-5.1.4</module>
       <module>spring-security-acl-6.3.9</module>
       <module>spring-security-aspects-6.3.9</module>
       <module>spring-security-config-6.3.9</module>
