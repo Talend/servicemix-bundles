@@ -1,0 +1,335 @@
+karaf@trun()> list -t 0 -u | grep jaxb/j
+217 │ Active   │  20 │ 4.0.5                     │ mvn:org.glassfish.jaxb/jaxb-core/4.0.5
+218 │ Active   │  20 │ 4.0.5                     │ mvn:org.glassfish.jaxb/jaxb-runtime/4.0.5
+220 │ Active   │  20 │ 4.0.5                     │ wrap:mvn:org.glassfish.jaxb/jaxb-xjc/4.0.5$Bundle-SymbolicName=org.glassfish.jaxb.xjc&Bundle-Version=4.0.5&Export-Package=com.sun.tools.xjc*;version=4.0.5
+karaf@trun()> headers 217
+
+JAXB Core (217)
+---------------
+Build-Id = 2024-03-06 05:55
+Build-Version = 4.0.5
+Created-By = Apache Maven Bundle Plugin 5.1.9
+Git-Revision = cb19596
+Git-Url = scm:git:ssh://git@github.com/eclipse-ee4j/jaxb-ri/jaxb-core
+Implementation-Build-Id = 4.0.5 - cb19596
+Implementation-Title = Eclipse Implementation of JAXB
+Implementation-Vendor = Eclipse Foundation
+Implementation-Vendor-Id = org.glassfish.jaxb
+Implementation-Version = 4.0.5 - cb19596
+Manifest-Version = 1.0
+Specification-Title = Jakarta XML Binding
+Specification-Vendor = Eclipse Foundation
+Specification-Version = 4.0
+
+Bundle-Description = JAXB Core module. Contains sources required by XJC, JXC and Runtime modules.
+Bundle-DocURL = https://www.eclipse.org
+Bundle-License = http://www.eclipse.org/org/documents/edl-v10.php
+Bundle-ManifestVersion = 2
+Bundle-Name = JAXB Core
+Bundle-SymbolicName = org.glassfish.jaxb.core
+Bundle-Vendor = Eclipse Foundation
+Bundle-Version = 4.0.5
+
+Require-Capability =
+	osgi.ee;filter:=(&(osgi.ee=JavaSE)(version=11))
+
+Export-Package =
+	org.glassfish.jaxb.core.v2.model.impl;uses:="org.glassfish.jaxb.core.v2.model.annotation,org.glassfish.jaxb.core.v2.model.nav";version=4.0.5,
+	org.glassfish.jaxb.core;uses:=org.xml.sax;version=4.0.5,
+	org.glassfish.jaxb.core.annotation;version=4.0.5,
+	org.glassfish.jaxb.core.api;uses:=org.xml.sax;version=4.0.5,
+	org.glassfish.jaxb.core.api.impl;version=4.0.5,
+	org.glassfish.jaxb.core.marshaller;uses:="javax.xml.parsers,org.w3c.dom,org.xml.sax,org.xml.sax.helpers";version=4.0.5,
+	org.glassfish.jaxb.core.unmarshaller;uses:="jakarta.xml.bind,org.glassfish.jaxb.core.v2.runtime.unmarshaller,org.w3c.dom,org.xml.sax";version=4.0.5,
+	org.glassfish.jaxb.core.util;version=4.0.5,
+	org.glassfish.jaxb.core.v2;version=4.0.5,
+	org.glassfish.jaxb.core.v2.model.annotation;uses:="org.glassfish.jaxb.core.v2.model.core,org.glassfish.jaxb.core.v2.runtime";version=4.0.5,
+	org.glassfish.jaxb.core.v2.model.core;
+		uses:="jakarta.activation,
+			jakarta.xml.bind,
+			jakarta.xml.bind.annotation,
+			jakarta.xml.bind.annotation.adapters,
+			javax.xml.namespace,
+			javax.xml.transform,
+			org.glassfish.jaxb.core.v2.model.annotation,
+			org.glassfish.jaxb.core.v2.model.impl,
+			org.glassfish.jaxb.core.v2.model.nav,
+			org.glassfish.jaxb.core.v2.runtime";
+		version=4.0.5,
+	org.glassfish.jaxb.core.v2.model.nav;uses:=org.glassfish.jaxb.core.v2.runtime;version=4.0.5,
+	org.glassfish.jaxb.core.v2.model.util;uses:=javax.xml.namespace;version=4.0.5,
+	org.glassfish.jaxb.core.v2.runtime;uses:="jakarta.activation,jakarta.xml.bind,jakarta.xml.bind.annotation.adapters,org.glassfish.jaxb.core.v2.model.annotation";version=4.0.5,
+	org.glassfish.jaxb.core.v2.runtime.unmarshaller;uses:="jakarta.xml.bind,org.w3c.dom,org.xml.sax";version=4.0.5,
+	org.glassfish.jaxb.core.v2.schemagen.episode;uses:="com.sun.xml.txw2,com.sun.xml.txw2.annotation";version=4.0.5,
+	org.glassfish.jaxb.core.v2.util;uses:="javax.xml.parsers,javax.xml.transform,javax.xml.validation,javax.xml.xpath";version=4.0.5
+Import-Package =
+	com.sun.istack;version="[4.1,5)",
+	com.sun.xml.txw2,
+	com.sun.xml.txw2.annotation,
+	jakarta.activation;version="[2.1,3)",
+	jakarta.xml.bind;version="[4.0,5)",
+	jakarta.xml.bind.annotation;version="[4.0,5)",
+	jakarta.xml.bind.annotation.adapters;version="[4.0,5)",
+	jakarta.xml.bind.helpers;version="[4.0,5)",
+	java.io,
+	java.lang,
+	java.lang.annotation,
+	java.lang.invoke,
+	java.lang.ref,
+	java.lang.reflect,
+	java.net,
+	java.security,
+	java.text,
+	java.util,
+	java.util.function,
+	java.util.logging,
+	java.util.stream,
+	javax.lang.model,
+	javax.xml.namespace,
+	javax.xml.parsers,
+	javax.xml.transform,
+	javax.xml.validation,
+	javax.xml.xpath,
+	org.glassfish.jaxb.core,
+	org.glassfish.jaxb.core.util,
+	org.glassfish.jaxb.core.v2,
+	org.glassfish.jaxb.core.v2.model.annotation,
+	org.glassfish.jaxb.core.v2.model.core,
+	org.glassfish.jaxb.core.v2.model.impl,
+	org.glassfish.jaxb.core.v2.model.nav,
+	org.glassfish.jaxb.core.v2.runtime,
+	org.glassfish.jaxb.core.v2.runtime.unmarshaller,
+	org.glassfish.jaxb.core.v2.util,
+	org.w3c.dom,
+	org.xml.sax,
+	org.xml.sax.helpers
+
+
+karaf@trun()> headers 218
+
+JAXB Runtime (218)
+------------------
+Build-Id = 2024-03-06 05:55
+Build-Version = 4.0.5
+Created-By = Apache Maven Bundle Plugin 5.1.9
+Git-Revision = cb19596
+Git-Url = scm:git:ssh://git@github.com/eclipse-ee4j/jaxb-ri/jaxb-runtime-parent/jaxb-runtime
+Implementation-Build-Id = 4.0.5 - cb19596
+Implementation-Title = Eclipse Implementation of JAXB
+Implementation-Vendor = Eclipse Foundation
+Implementation-Vendor-Id = org.glassfish.jaxb
+Implementation-Version = 4.0.5 - cb19596
+Manifest-Version = 1.0
+Specification-Title = Jakarta XML Binding
+Specification-Vendor = Eclipse Foundation
+Specification-Version = 4.0
+
+Bundle-Description = JAXB (JSR 222) Reference Implementation
+Bundle-DocURL = https://www.eclipse.org
+Bundle-License = http://www.eclipse.org/org/documents/edl-v10.php
+Bundle-ManifestVersion = 2
+Bundle-Name = JAXB Runtime
+Bundle-SymbolicName = org.glassfish.jaxb.runtime
+Bundle-Vendor = Eclipse Foundation
+Bundle-Version = 4.0.5
+
+Provide-Capability =
+	osgi.serviceloader;osgi.serviceloader=jakarta.xml.bind.JAXBContextFactory
+Require-Capability =
+	osgi.extender;filter:=(&(osgi.extender=osgi.serviceloader.registrar)(version>=1.0.0)(!(version>=2.0.0)));resolution:=optional,
+	osgi.ee;filter:=(&(osgi.ee=JavaSE)(version=11))
+
+DynamicImport-Package =
+	*
+Export-Package =
+	org.glassfish.jaxb.runtime;uses:="jakarta.xml.bind,jakarta.xml.bind.annotation.adapters,javax.xml.datatype,javax.xml.namespace,javax.xml.stream,org.glassfish.jaxb.runtime.v2.runtime.reflect,org.xml.sax";version=4.0.5,
+	org.glassfish.jaxb.runtime.api;
+		uses:="jakarta.xml.bind,
+			jakarta.xml.bind.attachment,
+			javax.xml.namespace,
+			javax.xml.stream,
+			javax.xml.transform,
+			org.glassfish.jaxb.runtime.v2.model.annotation,
+			org.glassfish.jaxb.runtime.v2.model.runtime,
+			org.glassfish.jaxb.runtime.v2.runtime,
+			org.w3c.dom,
+			org.xml.sax";
+		version=4.0.5,
+	org.glassfish.jaxb.runtime.marshaller;uses:=org.glassfish.jaxb.core.marshaller;version=4.0.5,
+	org.glassfish.jaxb.runtime.unmarshaller;uses:=org.xml.sax;version=4.0.5,
+	org.glassfish.jaxb.runtime.util;uses:="jakarta.xml.bind.helpers,org.glassfish.jaxb.runtime,org.xml.sax";version=4.0.5,
+	org.glassfish.jaxb.runtime.v2;uses:="jakarta.xml.bind,org.glassfish.jaxb.runtime.api,org.glassfish.jaxb.runtime.v2.model.annotation";version=4.0.5,
+	org.glassfish.jaxb.runtime.v2.model.annotation;uses:="org.glassfish.jaxb.core.v2.model.annotation,org.glassfish.jaxb.core.v2.model.core,org.glassfish.jaxb.core.v2.model.nav,org.glassfish.jaxb.core.v2.runtime";version=4.0.5,
+	org.glassfish.jaxb.runtime.v2.model.runtime;uses:="jakarta.xml.bind,javax.xml.namespace,org.glassfish.jaxb.core.v2.model.core,org.glassfish.jaxb.runtime.v2.runtime,org.glassfish.jaxb.runtime.v2.runtime.reflect,org.xml.sax";version=4.0.5,
+	org.glassfish.jaxb.runtime.v2.runtime;
+		uses:="com.sun.istack,
+			jakarta.activation,
+			jakarta.xml.bind,
+			jakarta.xml.bind.annotation,
+			jakarta.xml.bind.annotation.adapters,
+			jakarta.xml.bind.attachment,
+			jakarta.xml.bind.helpers,
+			javax.xml.namespace,
+			javax.xml.stream,
+			javax.xml.transform,
+			javax.xml.transform.sax,
+			javax.xml.validation,
+			org.glassfish.jaxb.core.marshaller,
+			org.glassfish.jaxb.core.v2.model.core,
+			org.glassfish.jaxb.core.v2.runtime,
+			org.glassfish.jaxb.runtime.api,
+			org.glassfish.jaxb.runtime.marshaller,
+			org.glassfish.jaxb.runtime.v2.model.annotation,
+			org.glassfish.jaxb.runtime.v2.model.runtime,
+			org.glassfish.jaxb.runtime.v2.runtime.output,
+			org.glassfish.jaxb.runtime.v2.runtime.property,
+			org.glassfish.jaxb.runtime.v2.runtime.unmarshaller,
+			org.w3c.dom,
+			org.xml.sax";
+		version=4.0.5,
+	org.glassfish.jaxb.runtime.v2.runtime.output;
+		uses:="com.sun.xml.fastinfoset.stax,
+			javax.xml.stream,
+			org.glassfish.jaxb.core.marshaller,
+			org.glassfish.jaxb.runtime.marshaller,
+			org.glassfish.jaxb.runtime.v2.runtime,
+			org.jvnet.staxex,
+			org.w3c.dom,
+			org.xml.sax";
+		version=4.0.5,
+	org.glassfish.jaxb.runtime.v2.runtime.property;
+		uses:="javax.xml.namespace,
+			javax.xml.stream,
+			org.glassfish.jaxb.core.v2.model.core,
+			org.glassfish.jaxb.runtime.api,
+			org.glassfish.jaxb.runtime.v2.model.runtime,
+			org.glassfish.jaxb.runtime.v2.runtime,
+			org.glassfish.jaxb.runtime.v2.runtime.reflect,
+			org.glassfish.jaxb.runtime.v2.runtime.unmarshaller,
+			org.glassfish.jaxb.runtime.v2.util,
+			org.xml.sax";
+		version=4.0.5,
+	org.glassfish.jaxb.runtime.v2.runtime.reflect;
+		uses:="jakarta.xml.bind,
+			jakarta.xml.bind.annotation.adapters,
+			javax.xml.stream,
+			org.glassfish.jaxb.core.v2.model.core,
+			org.glassfish.jaxb.runtime.api,
+			org.glassfish.jaxb.runtime.v2.model.runtime,
+			org.glassfish.jaxb.runtime.v2.runtime,
+			org.glassfish.jaxb.runtime.v2.runtime.unmarshaller,
+			org.xml.sax";
+		version=4.0.5,
+	org.glassfish.jaxb.runtime.v2.runtime.reflect.opt;uses:="javax.xml.stream,org.glassfish.jaxb.runtime.api,org.glassfish.jaxb.runtime.v2.runtime,org.glassfish.jaxb.runtime.v2.runtime.reflect,org.xml.sax";version=4.0.5,
+	org.glassfish.jaxb.runtime.v2.runtime.unmarshaller;
+		uses:="jakarta.activation,
+			jakarta.xml.bind,
+			jakarta.xml.bind.annotation,
+			jakarta.xml.bind.annotation.adapters,
+			jakarta.xml.bind.attachment,
+			jakarta.xml.bind.helpers,
+			javax.xml.namespace,
+			javax.xml.stream,
+			javax.xml.transform,
+			javax.xml.transform.sax,
+			javax.xml.validation,
+			org.glassfish.jaxb.core.unmarshaller,
+			org.glassfish.jaxb.core.v2.model.core,
+			org.glassfish.jaxb.core.v2.runtime.unmarshaller,
+			org.glassfish.jaxb.runtime,
+			org.glassfish.jaxb.runtime.api,
+			org.glassfish.jaxb.runtime.util,
+			org.glassfish.jaxb.runtime.v2.runtime,
+			org.glassfish.jaxb.runtime.v2.runtime.output,
+			org.glassfish.jaxb.runtime.v2.runtime.reflect,
+			org.w3c.dom,
+			org.xml.sax";
+		version=4.0.5,
+	org.glassfish.jaxb.runtime.v2.schemagen;uses:="com.sun.xml.txw2.output,jakarta.xml.bind,javax.xml.namespace,org.glassfish.jaxb.core.api,org.glassfish.jaxb.core.v2.model.core,org.glassfish.jaxb.core.v2.model.nav";version=4.0.5,
+	org.glassfish.jaxb.runtime.v2.schemagen.xmlschema;uses:="com.sun.xml.txw2,com.sun.xml.txw2.annotation,javax.xml.namespace";version=4.0.5,
+	org.glassfish.jaxb.runtime.v2.util;uses:="jakarta.activation,javax.xml.namespace,javax.xml.transform.stream,org.glassfish.jaxb.runtime.v2.runtime,org.glassfish.jaxb.runtime.v2.runtime.unmarshaller,org.xml.sax";version=4.0.5
+Import-Package =
+	com.sun.istack;version="[4.1,5)",
+	com.sun.xml.fastinfoset.sax;resolution:=optional;version="[2.1,3)",
+	com.sun.xml.fastinfoset.stax;resolution:=optional;version="[2.1,3)",
+	com.sun.xml.txw2,
+	com.sun.xml.txw2.annotation,
+	com.sun.xml.txw2.output,
+	jakarta.activation;version="[2.1,3)",
+	jakarta.xml.bind;version="[4.0,5)",
+	jakarta.xml.bind.annotation;version="[4.0,5)",
+	jakarta.xml.bind.annotation.adapters;version="[4.0,5)",
+	jakarta.xml.bind.attachment;version="[4.0,5)",
+	jakarta.xml.bind.helpers;version="[4.0,5)",
+	java.awt,
+	java.awt.image,
+	java.beans,
+	java.io,
+	java.lang,
+	java.lang.annotation,
+	java.lang.invoke,
+	java.lang.ref,
+	java.lang.reflect,
+	java.math,
+	java.net,
+	java.nio.charset,
+	java.security,
+	java.text,
+	java.util,
+	java.util.concurrent,
+	java.util.concurrent.locks,
+	java.util.function,
+	java.util.logging,
+	javax.imageio,
+	javax.imageio.stream,
+	javax.xml.datatype,
+	javax.xml.namespace,
+	javax.xml.parsers,
+	javax.xml.stream,
+	javax.xml.stream.events,
+	javax.xml.transform,
+	javax.xml.transform.dom,
+	javax.xml.transform.sax,
+	javax.xml.transform.stream,
+	javax.xml.validation,
+	org.glassfish.jaxb.core;version="[4.0,5)",
+	org.glassfish.jaxb.core.annotation;version="[4.0,5)",
+	org.glassfish.jaxb.core.api;version="[4.0,5)",
+	org.glassfish.jaxb.core.api.impl;version="[4.0,5)",
+	org.glassfish.jaxb.core.marshaller;version="[4.0,5)",
+	org.glassfish.jaxb.core.unmarshaller;version="[4.0,5)",
+	org.glassfish.jaxb.core.util;version="[4.0,5)",
+	org.glassfish.jaxb.core.v2;version="[4.0,5)",
+	org.glassfish.jaxb.core.v2.model.annotation;version="[4.0,5)",
+	org.glassfish.jaxb.core.v2.model.core;version="[4.0,5)",
+	org.glassfish.jaxb.core.v2.model.impl;version="[4.0,5)",
+	org.glassfish.jaxb.core.v2.model.nav;version="[4.0,5)",
+	org.glassfish.jaxb.core.v2.model.util;version="[4.0,5)",
+	org.glassfish.jaxb.core.v2.runtime;version="[4.0,5)",
+	org.glassfish.jaxb.core.v2.runtime.unmarshaller;version="[4.0,5)",
+	org.glassfish.jaxb.core.v2.schemagen.episode;version="[4.0,5)",
+	org.glassfish.jaxb.core.v2.util;version="[4.0,5)",
+	org.glassfish.jaxb.runtime,
+	org.glassfish.jaxb.runtime.api,
+	org.glassfish.jaxb.runtime.marshaller,
+	org.glassfish.jaxb.runtime.unmarshaller,
+	org.glassfish.jaxb.runtime.util,
+	org.glassfish.jaxb.runtime.v2,
+	org.glassfish.jaxb.runtime.v2.model.annotation,
+	org.glassfish.jaxb.runtime.v2.model.runtime,
+	org.glassfish.jaxb.runtime.v2.runtime.output,
+	org.glassfish.jaxb.runtime.v2.runtime.property,
+	org.glassfish.jaxb.runtime.v2.runtime.unmarshaller,
+	org.glassfish.jaxb.runtime.v2.schemagen.xmlschema,
+	org.glassfish.jaxb.runtime.v2.util,
+	org.jvnet.fastinfoset;resolution:=optional;version="[2.1,3)",
+	org.jvnet.fastinfoset.stax;resolution:=optional;version="[2.1,3)",
+	org.jvnet.staxex;resolution:=optional;version="[2.1,3)",
+	org.w3c.dom,
+	org.xml.sax,
+	org.xml.sax.helpers,
+	sun.misc;resolution:=optional,
+	jdk.internal.misc;resolution:=optional
+
+
+karaf@trun()>

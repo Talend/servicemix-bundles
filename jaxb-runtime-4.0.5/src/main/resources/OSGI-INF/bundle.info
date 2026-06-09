@@ -1,0 +1,15 @@
+\u001B[1mSYNOPSIS\u001B[0m
+    ${project.description}
+
+    Original Maven URLs:
+        \u001B[33mmvn:${pkgGroupId}/${pkgArtifactId}/${pkgVersion}\u001B[0m
+        \u001B[33mmvn:com.sun.istack/istack-commons-runtime/${istack.version}\u001B[0m
+
+\u001B[1mDESCRIPTION\u001B[0m
+    JAXB Runtime module with istack-commons-runtime embedded to avoid classloader
+    split issues in Karaf when com.sun.* boot delegation is active.
+
+\u001B[1mSEE ALSO\u001B[0m
+    \u001B[36mhttps://eclipse-ee4j.github.io/jaxb-ri/\u001B[0m
+
+
